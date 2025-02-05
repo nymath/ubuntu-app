@@ -1,0 +1,14 @@
+# /etc/systemd/system/frpcd.service
+[Unit]
+Description=frp Client Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/Frpc/bin/frpc_linux_amd64 -c /opt/Frpc/config/frpc.toml
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

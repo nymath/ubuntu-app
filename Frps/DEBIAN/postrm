@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo systemctl disable frpsd
+sudo systemctl stop frpsd
+rm -f '/usr/bin/frps'

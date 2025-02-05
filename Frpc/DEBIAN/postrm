@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+sudo systemctl disable frpcd
+sudo systemctl stop frpcd
+rm -f '/usr/bin/frpc'

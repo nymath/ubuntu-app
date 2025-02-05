@@ -1,0 +1,14 @@
+# /etc/systemd/system/frpcd.service
+[Unit]
+Description=frp service deamon
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/Frps/bin/frps_linux_amd64 -c /opt/Frps/config/frps.toml
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

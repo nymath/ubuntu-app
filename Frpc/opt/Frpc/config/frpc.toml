@@ -1,0 +1,46 @@
+serverAddr = "x.x.x.x"
+serverPort = 7000
+auth.method = "token"
+auth.token = "password"
+
+[[proxies]]
+name = "ssh-main"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 23012
+
+[[proxies]]
+name = "overleaf"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 50080
+remotePort = 50081
+
+[[proxies]]
+name = "nextcloud"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 51080
+remotePort = 51081
+
+[[proxies]]
+name = "vscode"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 52080
+remotePort = 52081
+
+[[proxies]]
+name = "trilium"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 53060
+remotePort = 53061
+
+[[proxies]]
+name = "ownCloud"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8080
+remotePort = 8081

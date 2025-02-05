@@ -1,0 +1,5 @@
+bindPort = 7001
+tcpmuxHTTPConnectPort = 5002
+vhostHTTPPort = 8080
+auth.method = "token"
+auth.token = "password"

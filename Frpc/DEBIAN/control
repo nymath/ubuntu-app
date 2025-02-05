@@ -1,0 +1,8 @@
+Package: Frpc
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Dr_Zhang <nymath@163.com>
+Section: default
+Priority: optional
+Description: 
+  A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. Kernel(0.57.0)
