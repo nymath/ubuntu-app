@@ -1,0 +1,8 @@
+Package: oh-my-zsh
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Dr_Zhang <nymath@163.com>
+Section: default
+Priority: optional
+Description: 
+  oh-my-zsh
