@@ -1,0 +1,20 @@
+[Unit]
+Description=Caddy
+Documentation=https://caddyserver.com/docs/
+After=network.target network-online.target
+Requires=network-online.target
+
+[Service]
+Type=notify
+User=root
+ExecStart=/opt/Caddy/bin/caddy_linux_amd64 run --environ --config /opt/Caddy/config/Caddyfile
+ExecReload=/opt/Caddy/bin/caddy_linux_amd64 reload --config /opt/Caddy/config/Caddyfile --force
+TimeoutStopSec=5s
+LimitNOFILE=1048576
+LimitNPROC=512
+PrivateTmp=true
+ProtectSystem=full
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target

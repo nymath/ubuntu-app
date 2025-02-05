@@ -1,0 +1,83 @@
+# The Caddyfile is an easy way to configure your Caddy web server.
+#
+# Unless the file starts with a global options block, the first
+# uncommented line is always the address of your site.
+#
+# To use your own domain name (with automatic HTTPS), first make
+# sure your domain's A/AAAA DNS records are properly pointed to
+# this machine's public IP, then replace ":80" below with your
+# domain name.
+
+# :80 {
+# 	# Set this path to your site's directory.
+# 	root * /usr/share/caddy
+
+# 	# Enable the static file server.
+# 	file_server
+
+# 	# Another common task is to set up a reverse proxy:
+# 	# reverse_proxy localhost:8080
+
+# 	# Or serve a PHP site through php-fpm:
+# 	# php_fastcgi localhost:9000
+#
+
+tex.mathspace.cn {
+	reverse_proxy localhost:50080
+	tls {
+		on_demand
+	}
+	log {
+		output file /opt/Caddy/log/overleaf-tex.log
+	}
+}
+
+latex.mathspace.cn {
+	reverse_proxy localhost:50081
+	tls {
+		on_demand
+	}
+	log {
+		output file /opt/Caddy/log/overleaf.log
+	}
+}
+
+cloud.mathspace.cn {
+	reverse_proxy localhost:8081
+	tls {
+		on_demand
+	}
+	log {
+		output file /opt/Caddy/log/ownCloud.log
+	}
+}
+
+code.mathspace.cn {
+	reverse_proxy localhost:52081
+	tls {
+		on_demand
+	}
+	log {
+		output file /opt/Caddy/log/vscode.log
+	}
+}
+
+wiki.mathspace.cn {
+    reverse_proxy localhost:53061
+    tls {
+        on_demand
+    }
+    log {
+        output file /opt/Caddy/log/wiki.log
+    }
+}
+
+panel.mathspace.cn {
+    reverse_proxy localhost:20080
+    tls {
+        on_demand
+    }
+    log {
+        output file /opt/Caddy/log/panel.log
+    }
+}
