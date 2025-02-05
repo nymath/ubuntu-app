@@ -22,7 +22,7 @@
 # 	# php_fastcgi localhost:9000
 #
 
-tex.mathspace.cn {
+tex.nymath.top {
 	reverse_proxy localhost:50080
 	tls {
 		on_demand
@@ -32,7 +32,7 @@ tex.mathspace.cn {
 	}
 }
 
-latex.mathspace.cn {
+latex.nymath.top {
 	reverse_proxy localhost:50081
 	tls {
 		on_demand
@@ -42,7 +42,7 @@ latex.mathspace.cn {
 	}
 }
 
-cloud.mathspace.cn {
+cloud.nymath.top {
 	reverse_proxy localhost:8081
 	tls {
 		on_demand
@@ -52,7 +52,7 @@ cloud.mathspace.cn {
 	}
 }
 
-code.mathspace.cn {
+code.nymath.top {
 	reverse_proxy localhost:52081
 	tls {
 		on_demand
@@ -62,7 +62,7 @@ code.mathspace.cn {
 	}
 }
 
-wiki.mathspace.cn {
+wiki.nymath.top {
     reverse_proxy localhost:53061
     tls {
         on_demand
@@ -72,7 +72,7 @@ wiki.mathspace.cn {
     }
 }
 
-panel.mathspace.cn {
+panel.nymath.top {
     reverse_proxy localhost:20080
     tls {
         on_demand
