@@ -1,8 +1,8 @@
-Package: Zsh
-Version: 1.0.1
+Package: caddy-pro
+Version: 1.0.2
 Architecture: amd64
 Maintainer: Dr_Zhang <nymath@163.com>
 Section: default
 Priority: optional
 Description: 
-  oh-my-zsh
+  Caddy

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ln -sf '/opt/Frps/main.py' '/usr/bin/frps-pro'
+ln -sf '/opt/Frps/main.py' '/usr/bin/frps'
+sudo systemctl enable frpsd
+sudo systemctl start frpsd
+
+echo "You can run 'frps-pro --help' to see how to use the program."

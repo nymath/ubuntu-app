@@ -7,12 +7,16 @@ from pathlib import Path
 
 ROOT = Path(os.path.realpath(__file__)).parent
 CONFIG_PATH = ROOT.joinpath("./config/frpc.toml")
+APP_NAME = "frpc"
 DEAMON_NAME = "frpcd"
 
 
 def func_config(args):
     try:
         subprocess.run(["sudo", "vim", f"{CONFIG_PATH}"], check=True)
+        print(
+            f"Configuration updated. Please run '{APP_NAME} restart' to apply the changes."
+        )
     except FileNotFoundError:
         print(f"Can not open {CONFIG_PATH}")
     except subprocess.CalledProcessError:

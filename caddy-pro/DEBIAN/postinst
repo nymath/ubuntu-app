@@ -1,5 +1,6 @@
 #!/bin/bash
 
+ln -sf '/opt/Caddy/main.py' '/usr/bin/caddy-pro'
 ln -sf '/opt/Caddy/main.py' '/usr/bin/caddy'
 sudo systemctl enable caddyd
 sudo systemctl start caddyd

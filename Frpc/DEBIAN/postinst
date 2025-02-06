@@ -1,6 +1,0 @@
-#!/bin/bash
-
-ln -sf '/opt/Frpc/main.py' '/usr/bin/frpc'
-sudo systemctl enable frpcd
-sudo systemctl start frpcd
-echo "You can run 'frpc --help' to see how to use the program."

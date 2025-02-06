@@ -1,5 +1,5 @@
-Package: Frps
-Version: 1.0.1
+Package: frps-pro
+Version: 1.0.2
 Architecture: amd64
 Maintainer: Dr_Zhang <nymath@163.com>
 Section: default

@@ -2,4 +2,5 @@
 
 sudo systemctl disable frpsd
 sudo systemctl stop frpsd
+rm -f '/usr/bin/frps-pro'
 rm -f '/usr/bin/frps'

@@ -30,10 +30,28 @@
 #   sh install.sh --unattended
 #
 
+# 如果当前用户不是 root，则将 SUDO 设为 "sudo"，否则设为空
+if [ "$(id -u)" -ne 0 ]; then
+    SUDO="sudo"
+else
+    SUDO=""
+fi
 
-dpkg -i /opt/Zsh/zsh-common_5.9-6ubuntu2_all.deb
-dpkg -i /opt/Zsh/zsh_5.9-6ubuntu2_amd64.deb
-set -e
+# 提示用户选择安装方式
+echo "请选择 Zsh 的安装方式："
+echo "  [Y] 使用安装包自动安装"
+echo "  [N] 使用系统的apt install安装"
+read -p "请输入 Y 或 N: " answer
+
+if [ "$answer" = "Y" ] || [ "$answer" = "y" ]; then
+    # 使用安装包安装 Zsh
+    echo "开始使用安装包安装 Zsh..."
+    $SUDO dpkg -i /opt/Zsh/app_zsh-common.deb
+    $SUDO dpkg -i /opt/Zsh/app_zsh.deb
+else
+    echo "sudo apt install zsh"
+	$SUDO apt install zsh
+fi
 
 # Default settings
 ZSH=/opt/Zsh/oh-my-zsh

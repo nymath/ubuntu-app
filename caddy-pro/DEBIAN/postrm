@@ -2,4 +2,5 @@
 
 sudo systemctl disable caddyd
 sudo systemctl stop caddyd
+rm -f '/usr/bin/caddy-pro'
 rm -f '/usr/bin/caddy'
